@@ -7,7 +7,6 @@ export const Background = styled.View`
 
 export const Container = styled.View`
   flex: 1;
-  background-color: red;
 `;
 
 export const Logo = styled.Image`
@@ -21,7 +20,7 @@ export const ContainerLogin = styled.View`
 `;
 
 export const Box = styled.View`
-  height: 519;
+  height: 500;
   width: 100%;
   background-color: #2b5141;
   border-top-right-radius: 52;
@@ -29,6 +28,17 @@ export const Box = styled.View`
 
   align-items: center;
   justify-content: center;
+  position: relative;
+`;
+
+export const BoxText = styled.View`
+  background-color: red;
+  width: 100%;
+  position: absolute;
+`;
+
+export const Text = styled.Text`
+  font-size: 35px;
 `;
 
 export const AreaInput = styled.View`
@@ -37,8 +47,6 @@ export const AreaInput = styled.View`
   justify-content: space-between;
   align-items: center;
 `;
-
-export const BoxText = styled.Text``;
 
 export const BoxInput = styled.View`
   height: 68;

@@ -7,6 +7,7 @@ import {
   ContainerLogin,
   Box,
   BoxText,
+  Text,
   AreaInput,
   BoxInput,
   Input,
@@ -21,10 +22,12 @@ export default function SignIn() {
         <Logo />
       </Container>
 
-      <BoxText>Login</BoxText>
-
       <ContainerLogin>
         <Box>
+          <BoxText>
+            <Text>Login</Text>
+          </BoxText>
+
           <AreaInput>
             <BoxInput>
               <Input placeholder="Nome Completo" autoCorrect={false} />
