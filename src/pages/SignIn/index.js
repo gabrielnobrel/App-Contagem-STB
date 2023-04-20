@@ -7,25 +7,28 @@ import {
   ContainerLogin,
   Box,
   BoxText,
-  Text,
+  TextLogin,
   AreaInput,
   BoxInput,
   Input,
   SubmitButton,
   SubmitText,
+  Register,
+  RegisterText,
+  ScreenRegister,
 } from "./styles";
 
 export default function SignIn() {
   return (
     <Background behavior={Platform.OS === "ios" ? "padding" : ""} enabled>
       <Container>
-        <Logo />
+        <Logo source={require("../../assets/signInLogo.png")} />
       </Container>
 
       <ContainerLogin>
         <Box>
           <BoxText>
-            <Text>Login</Text>
+            <TextLogin>Login</TextLogin>
           </BoxText>
 
           <AreaInput>
@@ -41,6 +44,11 @@ export default function SignIn() {
               <SubmitText>Entrar</SubmitText>
             </SubmitButton>
           </AreaInput>
+
+          <Register>
+            <RegisterText>Novo por aqui?</RegisterText>
+            <ScreenRegister>Clique Aqui</ScreenRegister>
+          </Register>
         </Box>
       </ContainerLogin>
     </Background>

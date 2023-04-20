@@ -10,7 +10,12 @@ export const Container = styled.View`
 `;
 
 export const Logo = styled.Image`
-  /* height: 367; */
+  position: absolute;
+  height: 281px;
+  width: 400px;
+
+  top: 22px;
+  left: -5px;
 `;
 
 export const ContainerLogin = styled.View`
@@ -20,40 +25,44 @@ export const ContainerLogin = styled.View`
 `;
 
 export const Box = styled.View`
-  height: 500;
+  height: 525px;
   width: 100%;
   background-color: #2b5141;
-  border-top-right-radius: 52;
-  border-top-left-radius: 52;
+  border-top-right-radius: 52px;
+  border-top-left-radius: 52px;
 
   align-items: center;
   justify-content: center;
-  position: relative;
 `;
 
 export const BoxText = styled.View`
-  background-color: red;
   width: 100%;
   position: absolute;
+  top: 32px;
 `;
 
-export const Text = styled.Text`
+export const TextLogin = styled.Text`
   font-size: 35px;
+  padding-left: 43px;
+  color: #ffffff;
+  font-weight: 700;
 `;
 
 export const AreaInput = styled.View`
-  height: 242;
-  width: 341;
-  justify-content: space-between;
+  height: 242px;
+  width: 100%;
+  padding: 0px 43px;
+  justify-content: center;
   align-items: center;
 `;
 
 export const BoxInput = styled.View`
-  height: 68;
+  height: 68px;
   width: 100%;
+  margin-bottom: 24px;
   background-color: #122d21;
-  border-radius: 20;
-
+  border-radius: 20px;
+  box-shadow: -20px -20px 60px #aaaaaa;
   justify-content: center;
 `;
 
@@ -62,14 +71,14 @@ export const Input = styled.TextInput.attrs({
   margin: 10,
 })`
   color: #ffffff;
-  font-size: 16;
+  font-size: 16px;
 `;
 
 export const SubmitButton = styled.TouchableOpacity`
   background-color: #122d21;
-  width: 195;
-  height: 58;
-  border-radius: 20;
+  width: 195px;
+  height: 58px;
+  border-radius: 20px;
 
   justify-content: center;
   align-items: center;
@@ -77,6 +86,29 @@ export const SubmitButton = styled.TouchableOpacity`
 
 export const SubmitText = styled.Text`
   color: #ffffff;
-  font-size: 20;
+  font-size: 20px;
   font-weight: 600;
+`;
+
+export const Register = styled.View`
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+`;
+export const RegisterText = styled.Text`
+  font-size: 16px;
+  color: #ffffff;
+`;
+export const ScreenRegister = styled.Text`
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+
+  margin-left: 10px;
 `;
