@@ -11,11 +11,11 @@ export const Container = styled.View`
 
 export const Logo = styled.Image`
   position: absolute;
-  height: 281px;
-  width: 400px;
+  height: 270px;
+  width: 270px;
 
-  top: 22px;
-  left: -5px;
+  top: -12px;
+  left: 50px;
 `;
 
 export const ContainerLogin = styled.View`
@@ -87,27 +87,4 @@ export const SubmitText = styled.Text`
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
-`;
-
-export const Register = styled.View`
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-  align-items: center;
-`;
-export const RegisterText = styled.Text`
-  font-size: 16px;
-  color: #ffffff;
-`;
-export const ScreenRegister = styled.Text`
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 700;
-
-  margin-left: 10px;
 `;

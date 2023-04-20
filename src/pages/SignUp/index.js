@@ -20,19 +20,19 @@ import {
   ScreenRegister,
 } from "./styles";
 
-export default function SignIn() {
+export default function SignUp() {
   const navigation = useNavigation();
 
   return (
     <Background behavior={Platform.OS === "ios" ? "padding" : ""} enabled>
       <Container>
-        <Logo source={require("../../assets/signInLogo.png")} />
+        <Logo source={require("../../assets/signUpLogo.png")} />
       </Container>
 
       <ContainerLogin>
         <Box>
           <BoxText>
-            <TextLogin>Login</TextLogin>
+            <TextLogin>Criar conta</TextLogin>
           </BoxText>
 
           <AreaInput>
@@ -45,16 +45,9 @@ export default function SignIn() {
             </BoxInput>
 
             <SubmitButton>
-              <SubmitText>Entrar</SubmitText>
+              <SubmitText>Criar conta</SubmitText>
             </SubmitButton>
           </AreaInput>
-
-          <Register>
-            <RegisterText>Novo por aqui?</RegisterText>
-            <ScreenRegister onPress={() => navigation.navigate("SignUp")}>
-              Clique Aqui
-            </ScreenRegister>
-          </Register>
         </Box>
       </ContainerLogin>
     </Background>
