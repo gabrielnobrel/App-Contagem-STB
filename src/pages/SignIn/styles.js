@@ -61,12 +61,12 @@ export const BoxInput = styled.View`
   width: 100%;
   margin-bottom: 24px;
   background-color: #5f9f9e;
-  border-radius: 20px;
+  border-radius: 12px;
   justify-content: center;
 `;
 
 export const Input = styled.TextInput.attrs({
-  placeholderTextColor: "#ffffff",
+  placeholderTextColor: "rgba(255, 255, 255, 0.5)",
   margin: 10,
 })`
   color: #ffffff;
@@ -75,9 +75,9 @@ export const Input = styled.TextInput.attrs({
 
 export const SubmitButton = styled.TouchableOpacity`
   background-color: #5f9f9e;
-  width: 195px;
+  width: 170px;
   height: 58px;
-  border-radius: 20px;
+  border-radius: 12px;
 
   justify-content: center;
   align-items: center;
