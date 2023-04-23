@@ -49,11 +49,12 @@ export const TextLogin = styled.Text`
 `;
 
 export const AreaInput = styled.View`
-  height: 242px;
+  height: auto;
   width: 100%;
   padding: 0px 43px;
   justify-content: center;
   align-items: center;
+  margin-top: 70px;
 `;
 
 export const BoxInput = styled.View`

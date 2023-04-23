@@ -1,15 +1,14 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9_T7r1hQmqcu-yKwB9CepcOoXb4FFTvo",
-  authDomain: "chatgpt-917f8.firebaseapp.com",
-  databaseURL: "https://chatgpt-917f8-default-rtdb.firebaseio.com",
-  projectId: "chatgpt-917f8",
-  storageBucket: "chatgpt-917f8.appspot.com",
-  messagingSenderId: "228379907384",
-  appId: "1:228379907384:web:31563621a27363b7f15dcd",
+  apiKey: "AIzaSyD_ZwPRx0KQANgB_Q5yozpdEtQJMIzQe34",
+  authDomain: "contagem-34079.firebaseapp.com",
+  databaseURL: "https://contagem-34079-default-rtdb.firebaseio.com",
+  projectId: "contagem-34079",
+  storageBucket: "contagem-34079.appspot.com",
+  messagingSenderId: "14485063497",
+  appId: "1:14485063497:web:8e146a3061e89fbb4e3c98",
 };
-
 const firebaseConnection = initializeApp(firebaseConfig);
 
 export default firebaseConnection;

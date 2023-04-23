@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Platform } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+
+import { AuthContext } from "../../context/auth";
 
 import {
   Background,
@@ -21,7 +22,15 @@ import {
 } from "./styles";
 
 export default function SignUp() {
-  const navigation = useNavigation();
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { signUp } = useContext(AuthContext);
+
+  function handleSignUp() {
+    signUp(nome, email, password);
+  }
 
   return (
     <Background behavior={Platform.OS === "ios" ? "padding" : ""} enabled>
@@ -37,14 +46,33 @@ export default function SignUp() {
 
           <AreaInput>
             <BoxInput>
-              <Input placeholder="Nome Completo" autoCorrect={false} />
+              <Input
+                placeholder="Nome Completo"
+                autoCorrect={false}
+                value={nome}
+                onChangeText={(text) => setNome(text)}
+              />
             </BoxInput>
 
             <BoxInput>
-              <Input placeholder="Senha" autoCorrect={false} />
+              <Input
+                placeholder="Email"
+                autoCorrect={false}
+                value={email}
+                onChangeText={(text) => setEmail(text)}
+              />
             </BoxInput>
 
-            <SubmitButton>
+            <BoxInput>
+              <Input
+                placeholder="Senha"
+                autoCorrect={false}
+                value={password}
+                onChangeText={(text) => setPassword(text)}
+              />
+            </BoxInput>
+
+            <SubmitButton onPress={handleSignUp}>
               <SubmitText>Criar conta</SubmitText>
             </SubmitButton>
           </AreaInput>
