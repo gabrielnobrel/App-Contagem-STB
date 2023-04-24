@@ -68,7 +68,7 @@ export const BoxInput = styled.View`
 
 export const Input = styled.TextInput.attrs({
   placeholderTextColor: "rgba(255, 255, 255, 0.5)",
-  margin: 10,
+  margin: 20,
 })`
   color: #ffffff;
   font-size: 16px;
