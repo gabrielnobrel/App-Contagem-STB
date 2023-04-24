@@ -19,7 +19,7 @@ function AuthProvider({ children }) {
       const storageUser = await AsyncStorage.getItem("Auth_user");
 
       if (storageUser) {
-        setUser(JSON.parse(storageUser));
+        // setUser(JSON.parse(storageUser));
         setLoading(false);
       }
       setLoading(false);

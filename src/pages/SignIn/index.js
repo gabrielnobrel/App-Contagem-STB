@@ -8,10 +8,8 @@ import {
   Container,
   Logo,
   ContainerLogin,
-  Box,
   BoxText,
   TextLogin,
-  AreaInput,
   BoxInput,
   Input,
   SubmitButton,
@@ -39,42 +37,38 @@ export default function SignIn() {
       </Container>
 
       <ContainerLogin>
-        <Box>
-          <BoxText>
-            <TextLogin>Login</TextLogin>
-          </BoxText>
+        <BoxText>
+          <TextLogin>Login</TextLogin>
+        </BoxText>
 
-          <AreaInput>
-            <BoxInput>
-              <Input
-                placeholder="Nome Completo"
-                autoCorrect={false}
-                value={email}
-                onChangeText={(text) => setEmail(text)}
-              />
-            </BoxInput>
+        <BoxInput>
+          <Input
+            placeholder="Email"
+            autoCorrect={false}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+          />
+        </BoxInput>
 
-            <BoxInput>
-              <Input
-                placeholder="Senha"
-                autoCorrect={false}
-                value={password}
-                onChangeText={(text) => setPassword(text)}
-              />
-            </BoxInput>
+        <BoxInput>
+          <Input
+            placeholder="Senha"
+            autoCorrect={false}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+        </BoxInput>
 
-            <SubmitButton onPress={handleLogin}>
-              <SubmitText>Entrar</SubmitText>
-            </SubmitButton>
-          </AreaInput>
+        <SubmitButton onPress={handleLogin}>
+          <SubmitText>Entrar</SubmitText>
+        </SubmitButton>
 
-          <Register>
-            <RegisterText>Novo por aqui?</RegisterText>
-            <ScreenRegister onPress={() => navigation.navigate("SignUp")}>
-              Clique Aqui
-            </ScreenRegister>
-          </Register>
-        </Box>
+        <Register>
+          <RegisterText>Novo por aqui?</RegisterText>
+          <ScreenRegister onPress={() => navigation.navigate("SignUp")}>
+            Cadastre-se!
+          </ScreenRegister>
+        </Register>
       </ContainerLogin>
     </Background>
   );
