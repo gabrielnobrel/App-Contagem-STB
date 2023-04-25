@@ -5,7 +5,8 @@ export const Background = styled.View`
   background-color: #f3f3f3;
 `;
 
-export const Container = styled.View`
+export const ContainerBackground = styled.KeyboardAvoidingView`
+  flex: 1;
   align-items: center;
   justify-content: center;
 `;
@@ -16,7 +17,8 @@ export const Logo = styled.Image`
 `;
 
 export const ContainerLogin = styled.View`
-  height: 100%;
+  flex: 1;
+  /* height: 100%; */
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;

@@ -5,6 +5,7 @@ import { AuthContext } from "../../context/auth";
 
 import {
   Background,
+  ContainerBackground,
   Container,
   Logo,
   ContainerLogin,
@@ -31,45 +32,48 @@ export default function SignIn() {
   }
 
   return (
-    <Background behavior={Platform.OS === "ios" ? "padding" : ""} enabled>
-      <Container>
+    <Background>
+      <ContainerBackground
+        behavior={Platform.OS === "ios" ? "padding" : ""}
+        enabled
+      >
         <Logo source={require("../../assets/signInLogo.png")} />
-      </Container>
 
-      <ContainerLogin>
-        <BoxText>
-          <TextLogin>Login</TextLogin>
-        </BoxText>
+        <ContainerLogin>
+          <BoxText>
+            <TextLogin>Login</TextLogin>
+          </BoxText>
 
-        <BoxInput>
-          <Input
-            placeholder="Email"
-            autoCorrect={false}
-            value={email}
-            onChangeText={(text) => setEmail(text)}
-          />
-        </BoxInput>
+          <BoxInput>
+            <Input
+              placeholder="Email"
+              autoCorrect={false}
+              value={email}
+              onChangeText={(text) => setEmail(text)}
+            />
+          </BoxInput>
 
-        <BoxInput>
-          <Input
-            placeholder="Senha"
-            autoCorrect={false}
-            value={password}
-            onChangeText={(text) => setPassword(text)}
-          />
-        </BoxInput>
+          <BoxInput>
+            <Input
+              placeholder="Senha"
+              autoCorrect={false}
+              value={password}
+              onChangeText={(text) => setPassword(text)}
+            />
+          </BoxInput>
 
-        <SubmitButton onPress={handleLogin}>
-          <SubmitText>Entrar</SubmitText>
-        </SubmitButton>
+          <SubmitButton onPress={handleLogin}>
+            <SubmitText>Entrar</SubmitText>
+          </SubmitButton>
 
-        <Register>
-          <RegisterText>Novo por aqui?</RegisterText>
-          <ScreenRegister onPress={() => navigation.navigate("SignUp")}>
-            Cadastre-se!
-          </ScreenRegister>
-        </Register>
-      </ContainerLogin>
+          <Register>
+            <RegisterText>Novo por aqui?</RegisterText>
+            <ScreenRegister onPress={() => navigation.navigate("SignUp")}>
+              Cadastre-se!
+            </ScreenRegister>
+          </Register>
+        </ContainerLogin>
+      </ContainerBackground>
     </Background>
   );
 }

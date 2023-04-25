@@ -8,17 +8,12 @@ import {
   Container,
   Logo,
   ContainerLogin,
-  Box,
   BoxText,
   TextLogin,
-  AreaInput,
   BoxInput,
   Input,
   SubmitButton,
   SubmitText,
-  Register,
-  RegisterText,
-  ScreenRegister,
 } from "./styles";
 
 export default function SignUp() {
@@ -39,44 +34,38 @@ export default function SignUp() {
       </Container>
 
       <ContainerLogin>
-        <Box>
-          <BoxText>
-            <TextLogin>Criar conta</TextLogin>
-          </BoxText>
+        <BoxText>
+          <TextLogin>Criar conta</TextLogin>
+        </BoxText>
+        <BoxInput>
+          <Input
+            placeholder="Nome Completo"
+            autoCorrect={false}
+            value={nome}
+            onChangeText={(text) => setNome(text)}
+          />
+        </BoxInput>
 
-          <AreaInput>
-            <BoxInput>
-              <Input
-                placeholder="Nome Completo"
-                autoCorrect={false}
-                value={nome}
-                onChangeText={(text) => setNome(text)}
-              />
-            </BoxInput>
+        <BoxInput>
+          <Input
+            placeholder="Email"
+            autoCorrect={false}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+          />
+        </BoxInput>
 
-            <BoxInput>
-              <Input
-                placeholder="Email"
-                autoCorrect={false}
-                value={email}
-                onChangeText={(text) => setEmail(text)}
-              />
-            </BoxInput>
-
-            <BoxInput>
-              <Input
-                placeholder="Senha"
-                autoCorrect={false}
-                value={password}
-                onChangeText={(text) => setPassword(text)}
-              />
-            </BoxInput>
-
-            <SubmitButton onPress={handleSignUp}>
-              <SubmitText>Criar conta</SubmitText>
-            </SubmitButton>
-          </AreaInput>
-        </Box>
+        <BoxInput>
+          <Input
+            placeholder="Senha"
+            autoCorrect={false}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+        </BoxInput>
+        <SubmitButton onPress={handleSignUp}>
+          <SubmitText>Criar conta</SubmitText>
+        </SubmitButton>
       </ContainerLogin>
     </Background>
   );
